@@ -18,7 +18,6 @@ async function BridgeShowInterstitialAd(request)
         request.jsonData = 'interstitial';
     }
     try {
-        console.log('--Show inter in bridge: ' + request.jsonData);
         var data = await vkBridge.send('VKWebAppShowNativeAds', { 'ad_format': request.jsonData });
         SendSuccessMessage(request);
         console.log('-Success show VKBridge Intestitial Ad! Data result: '+data.result);
